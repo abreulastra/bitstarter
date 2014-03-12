@@ -1,10 +1,11 @@
 var express = require('express'), fs=require('fs'), buffer=require('buffer');
 var app = express();
-app.use(express.logger());
+var buffer=fs.readFileSync("index.html");
+App.use(express.logger());
 
 
 app.get('/', function(request, response) {
-  response.send(fs.readFileSync("index.html","utf8"));
+  response.send("hipity pop");
 });
 
 var port = process.env.PORT || 5000;
