@@ -1,4 +1,4 @@
-var express = require('express'), fs=require('fs');
+var express = require('express'), fs=require('fs'), buffer=require('buffer');
 var app = express();
 app.use(express.logger());
 
