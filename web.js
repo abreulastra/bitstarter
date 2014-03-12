@@ -1,6 +1,6 @@
 var express = require('express'), fs=require('fs'), buffer=require('buffer');
 var app = express();
-var buffer=fs.readFileSync(index.html);
+var buffer=fs.readFileSync(/bitstarter/index.html);
 app.use(express.logger());
 
 
