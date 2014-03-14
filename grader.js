@@ -63,11 +63,11 @@ var clone = function(fn) {
 
 if(require.main == module) {
     program
-        .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists),CHEKSFILE_DEFAULT)
+        .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists),CHECKSFILE_DEFAULT)
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
-        .parce(process.argv);
+        .parse(process.argv);
     var checkJson=checkHtmlFile(program.file, program.checks);
-    var outJson=JSON.strinfigy(checkJson, null,4);
+    var outJson=JSON.stringify(checkJson, null,4);
     console.log(outJson);
 } else {
     exports.checkHtmlFile=checkHtmlFile;
